@@ -1,0 +1,4 @@
+node_modules/
+admin/exports/
+*service-account*.json
+.env
