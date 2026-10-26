@@ -1,0 +1,146 @@
+[
+  {
+    "tag": "IN A HURRY",
+    "say": "I'm running late. I don't want to wait in that ordering line again.",
+    "opts": [
+      "You can order ahead in our app and skip the ordering line.",
+      "You earn one point for every dollar spent.",
+      "We have birthday bonus points."
+    ],
+    "right": 0,
+    "why": "Lead with convenience. App ordering lets customers order ahead and skip the ordering line.",
+    "id": "q1"
+  },
+  {
+    "tag": "FIRST-TIME VISITOR",
+    "say": "Is there a fee to join your rewards program?",
+    "opts": [
+      "There is a one-time membership fee.",
+      "It’s free to join! New members can get 50% off a Classic Pearl Milk Tea after downloading the app.",
+      "You need to spend $12 to sign up."
+    ],
+    "right": 1,
+    "why": "Membership is free. Introduce the new-member Classic Pearl Milk Tea offer.",
+    "id": "q2"
+  },
+  {
+    "tag": "REGULAR CUSTOMER",
+    "say": "I buy a drink here almost every day. Is the app worth it?",
+    "opts": [
+      "You get a free drink every twelve visits.",
+      "There are no rewards for regular customers.",
+      "You earn one point per dollar, and twelve points can get you a $1 reward coupon."
+    ],
+    "right": 2,
+    "why": "Regular customers benefit from earning points on purchases. 12 points = a $1 reward coupon.",
+    "id": "q3"
+  },
+  {
+    "tag": "CURIOUS CUSTOMER",
+    "say": "Where do I find special member deals?",
+    "opts": [
+      "Check the Rewards section in the app for member-only offers.",
+      "Only cashiers can see member promotions.",
+      "All offers are shown only on paper receipts."
+    ],
+    "right": 0,
+    "why": "The Rewards section is the right place to find member-only offers and promotions.",
+    "id": "q4"
+  },
+  {
+    "tag": "BIRTHDAY CUSTOMER",
+    "say": "Does being a member give me anything on my birthday?",
+    "opts": [
+      "You get a free drink of any size.",
+      "Members get a birthday bonus of double points.",
+      "Birthday offers are only for first-time visitors."
+    ],
+    "right": 1,
+    "why": "The supplied program details list birthday bonus points (2× points).",
+    "id": "q5"
+  },
+  {
+    "tag": "AFTER PURCHASE",
+    "say": "I already paid. Is there any reason to download the app for next time?",
+    "opts": [
+      "The app replaces all in-store ordering.",
+      "Membership requires a minimum monthly purchase.",
+      "You can order ahead next time and check the Rewards section for offers."
+    ],
+    "right": 2,
+    "why": "Connect the app to the customer’s next visit: order ahead and discover rewards.",
+    "id": "q6"
+  },
+  {
+    "tag": "POINTS QUESTION",
+    "say": "How many points would I earn on a $7 purchase?",
+    "opts": [
+      "7 points.",
+      "12 points.",
+      "14 points."
+    ],
+    "right": 0,
+    "why": "At one point per $1 spent, a $7 purchase earns 7 points.",
+    "id": "q7"
+  },
+  {
+    "tag": "REWARD VALUE",
+    "say": "I have 24 points. What reward coupon value does that represent at the 12-point rate?",
+    "opts": [
+      "$1",
+      "$2",
+      "$5"
+    ],
+    "right": 1,
+    "why": "24 ÷ 12 = 2, so that is $2 in reward-coupon value at the stated rate.",
+    "id": "q8"
+  },
+  {
+    "tag": "APP SKEPTIC",
+    "say": "I don’t want a long sales pitch. What’s the main benefit?",
+    "opts": [
+      "You have to sign up before you order.",
+      "All drinks are always discounted.",
+      "It’s free to join, and you can order ahead and earn rewards."
+    ],
+    "right": 2,
+    "why": "Keep the pitch short, useful, and accurate. Avoid pressure or unsupported guarantees.",
+    "id": "q9"
+  },
+  {
+    "tag": "PROMOTION QUESTION",
+    "say": "Are member-only offers always the same?",
+    "opts": [
+      "There are also special offers and promotions throughout the year.",
+      "The app has exactly one promotion forever.",
+      "Only new members can ever see offers."
+    ],
+    "right": 0,
+    "why": "Member-only offers and special events can change throughout the year.",
+    "id": "q10"
+  },
+  {
+    "tag": "ORDER PICKUP",
+    "say": "If I order in the app, can I avoid waiting to place the order in store?",
+    "opts": [
+      "The app guarantees your drink is ready immediately.",
+      "Yes, you can order ahead and skip the ordering line.",
+      "App orders must still be placed at the cashier."
+    ],
+    "right": 1,
+    "why": "Order Ahead skips the ordering line, but does not guarantee instant drink preparation.",
+    "id": "q11"
+  },
+  {
+    "tag": "POINTS VALUE",
+    "say": "If I earn 12 points, what can I redeem according to the program?",
+    "opts": [
+      "A $10 reward coupon.",
+      "A free drink of any size.",
+      "A $1 reward coupon."
+    ],
+    "right": 2,
+    "why": "The stated rate is 12 points for a $1 reward coupon.",
+    "id": "q12"
+  }
+]
