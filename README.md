@@ -38,3 +38,18 @@ Outputs four CSVs in `admin/exports/`. Service-account keys are sensitive. Keep 
 - `Missing or insufficient permissions`: publish `firestore.rules` to **Cloud Firestore**, check Anonymous Auth, and reload.
 - `The query requires an index`: use the Firebase Console link in the browser error to create a composite index for `scores` (`mode` ascending, `score` descending). Index creation is supported on Spark.
 - Do not paste Firestore rules into Realtime Database Rules; they use different languages.
+
+
+## v3: Editable question bank and chat UI
+
+Edit **`docs/data/questions.json`** only to add or change questions. The file contains a `version` string and `questions` array. Duplicate one object inside the array, assign a unique `id`, update `customerMessage`, `options` (each with stable unique `id`), `correctAnswerId`, `customerReaction`, `explanation`, `modes`, and `enabled`. Keep JSON commas and quotes valid. The `modes` values are `simulator`, `rush`, `roleplay`. Increment `version` when modifying questions.
+
+Simulator randomly selects up to five questions without repetition. Rush Hour shuffles questions and repeats only after the deck is exhausted. Roleplay room host selects one shared randomized deck. Answer option positions are randomized; answer IDs remain stable for reporting.
+
+The chat UI uses red outgoing staff bubbles, white incoming customer bubbles. Solo results render immediately even if Firebase saving is delayed or fails.
+
+**Deployment:** upload `docs/`, `admin/`, `firestore.rules`, and README to the root of the existing GitHub repository. GitHub Pages remains `main` → `/docs`. The existing Firestore rules may remain unchanged for this v3 update.
+
+**Testing:** try Customer Simulator in a fresh/private browser session, verify results; check the browser DevTools Console if `Connection failed` appears. Anonymous Auth must be enabled in Firebase. Quick Match and private rooms require two separate anonymous browser sessions.
+
+**Security / limits:** client-side shared access code is not secret. This is a casual training app; client-submitted scores can be forged. Spark has quotas; exceeding them can suspend operations, but do not enable billing. This project does not use Cloud Functions.
