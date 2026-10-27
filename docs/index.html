@@ -1,42 +1,314 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#C8102E"><title>Sharetea Academy</title><style>
-:root{--red:#C8102E;--ink:#202124;--muted:#6c7075;--line:#ececec}*{box-sizing:border-box}body{margin:0;background:#fafafa;color:var(--ink);font:16px/1.5 system-ui,-apple-system,'Segoe UI',sans-serif}button,input,select{font:inherit}button{cursor:pointer}button:disabled{opacity:.5;cursor:wait}.wrap{max-width:1050px;margin:auto;padding:0 22px}header{background:white;border-bottom:1px solid var(--line)}header .wrap{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{font-size:22px;font-weight:850;color:var(--red)}.brand small{font-size:11px;letter-spacing:2px;color:#666}.hero{padding:64px 0 30px}h1{font-size:clamp(36px,6vw,64px);letter-spacing:-2px;line-height:1.1;margin:8px 0 18px}h2{font-size:26px;letter-spacing:-.8px;margin:0 0 12px}p{color:var(--muted)}.eyebrow{font-size:12px;color:var(--red);letter-spacing:1.5px;font-weight:800}.card{background:white;border:1px solid var(--line);border-radius:24px;padding:26px;margin-bottom:18px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}.btn{border:0;border-radius:100px;padding:13px 22px;background:var(--red);color:white;font-weight:750}.btn.alt{background:white;color:var(--ink);border:1px solid #ddd}.btn.small{padding:9px 14px;font-size:13px}.actions{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}.muted{color:var(--muted);font-size:13px}.hide{display:none!important}input,select{width:100%;padding:12px;border-radius:13px;border:1px solid #ddd;background:#fff}label{font-weight:650;font-size:13px;display:block;margin:12px 0 6px}.option{display:block;width:100%;text-align:left;border:1px solid #ddd;background:white;border-radius:16px;padding:15px;margin:10px 0}.option:hover{border-color:var(--red)}.good{background:#ecf9f1!important;border-color:#198754!important}.bad{background:#fff0f2!important;border-color:var(--red)!important}.pill{background:#f5f5f5;border-radius:20px;padding:6px 12px;font-size:12px}.row{display:flex;justify-content:space-between;align-items:center;gap:12px}.rank{padding:12px 0;border-bottom:1px solid #eee;display:flex;justify-content:space-between}.rank:last-child{border:0}.panel{max-width:720px;margin:30px auto 70px}.status{padding:13px;border-radius:14px;background:#f6f6f6;margin:15px 0;white-space:pre-wrap}.error{background:#fff0f2;color:#a10d26}.chat{background:#f6f7f8;padding:22px;border-radius:18px;font-size:21px;font-weight:650}.code{font-size:36px;letter-spacing:7px;font-weight:850;color:var(--red);text-align:center}.timer{font-weight:850;color:var(--red)}.progress{height:6px;border-radius:9px;background:#eee;overflow:hidden;margin:20px 0}.progress>div{height:100%;background:var(--red)}.footer{text-align:center;padding:30px;color:#aaa;font-size:12px}a{color:var(--red)}@media(max-width:600px){.card{padding:20px}.hero{padding:40px 0 18px}}
- .chat-thread{background:#f4f6f8;border-radius:20px;padding:20px 15px;min-height:170px;margin:14px 0 22px;display:flex;flex-direction:column;gap:12px}.bubble-row{display:flex}.bubble-row.left{justify-content:flex-start}.bubble-row.right{justify-content:flex-end}.bubble{max-width:85%;padding:11px 15px;border-radius:17px;box-shadow:0 1px 3px #0000000b;overflow-wrap:anywhere}.bubble-in{background:white;border-top-left-radius:5px}.bubble-out{background:#C8102E;color:white;border-top-right-radius:5px}.bubble-who{display:block;font-size:11px;font-weight:750;opacity:.75;margin-bottom:4px}.bubble small{display:block;text-align:right;font-size:10px;opacity:.65;margin-top:5px}.option{transition:border-color .12s,background .12s}.option:hover{background:#fff7f8}@media(max-width:600px){.chat-thread{padding:12px}.bubble{max-width:93%}}
+< !doctype html > < html lang = "en" > < head > < meta charset = "utf-8" > < meta name = "viewport"
+content = "width=device-width,initial-scale=1" > < meta name = "theme-color"
+content = "#C8102E" > < title > Sharetea Academy < /title><style>: root {
+    --red: #C8102E;
+    --ink: #202124;--muted:# 6 c7075;
+    --line: #ececec
+}*{
+    box - sizing: border - box
+}
+body {
+    margin: 0;background: #fafafa;color: var (--ink);font: 16 px / 1.5 system - ui,
+    -apple - system,
+    'Segoe UI',
+    sans - serif
+}
+button, input, select {
+    font: inherit
+}
+button {
+    cursor: pointer
+}
+button: disabled {
+    opacity: .5;cursor: wait
+}.wrap {
+    max - width: 1050 px;
+    margin: auto;
+    padding: 0 22 px
+}
+header {
+    background: white;border - bottom: 1 px solid
+    var (--line)
+}
+header.wrap {
+    height: 72 px;display: flex;align - items: center;justify - content: space - between
+}.brand {
+    font - size: 22 px;
+    font - weight: 850;
+    color: var (--red)
+}.brand small {
+    font - size: 11 px;
+    letter - spacing: 2 px;
+    color: #666}.hero{padding:64px 0 30px}h1{font-size:clamp(36px,6vw,64px);letter-spacing:-2px;line-height:1.1;margin:8px 0 18px}h2{font-size:26px;letter-spacing:-.8px;margin:0 0 12px}p{color:var(--muted)}.eyebrow{font-size:12px;color:var(--red);letter-spacing:1.5px;font-weight:800}.card{background:white;border:1px solid var(--line);border-radius:24px;padding:26px;margin-bottom:18px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}.btn{border:0;border-radius:100px;padding:13px 22px;background:var(--red);color:white;font-weight:750}.btn.alt{background:white;color:var(--ink);border:1px solid # ddd
+}.btn.small {
+    padding: 9 px 14 px;font - size: 13 px
+}.actions {
+    display: flex;flex - wrap: wrap;gap: 10 px;margin: 18 px 0
+}.muted {
+    color: var (--muted);font - size: 13 px
+}.hide {
+    display: none!important
+}
+input, select {
+    width: 100 % ;padding: 12 px;border - radius: 13 px;border: 1 px solid #ddd;background: #fff
+}
+label {
+    font - weight: 650;
+    font - size: 13 px;
+    display: block;
+    margin: 12 px 0 6 px
+}.option {
+    display: block;width: 100 % ;text - align: left;border: 1 px solid #ddd;background: white;border - radius: 16 px;padding: 15 px;margin: 10 px 0
+}.option: hover {
+    border - color: var (--red)
+}.good {
+    background: #ecf9f1!important;border - color: #198754!important}.bad{background:# fff0f2!important;border - color: var (--red) !important
+}.pill {
+    background: #f5f5f5;border - radius: 20 px;padding: 6 px 12 px;font - size: 12 px
+}.row {
+    display: flex;justify - content: space - between;align - items: center;gap: 12 px
+}.rank {
+    padding: 12 px 0;border - bottom: 1 px solid #eee;display: flex;justify - content: space - between
+}.rank: last - child {
+    border: 0
+}.panel {
+    max - width: 720 px;
+    margin: 30 px auto 70 px
+}.status {
+    padding: 13 px;border - radius: 14 px;background: #f6f6f6;margin: 15 px 0;white - space: pre - wrap
+}.error {
+    background: #fff0f2;color: #a10d26
+}.chat {
+    background: #f6f7f8;padding: 22 px;border - radius: 18 px;font - size: 21 px;font - weight: 650
+}.code {
+    font - size: 36 px;
+    letter - spacing: 7 px;
+    font - weight: 850;
+    color: var (--red);
+    text - align: center
+}.timer {
+    font - weight: 850;
+    color: var (--red)
+}.progress {
+    height: 6 px;border - radius: 9 px;background: #eee;overflow: hidden;margin: 20 px 0
+}.progress > div {
+    height: 100 % ;background: var (--red)
+}.footer {
+    text - align: center;
+    padding: 30 px;
+    color: #aaa;
+    font - size: 12 px
+}
+a {
+    color: var (--red)
+}
+@media(max - width: 600 px) {
+        .card {
+            padding: 20 px
+        }.hero {
+            padding: 40 px 0 18 px
+        }
+    }
+    .chat - thread {
+        background: #f4f6f8;border - radius: 20 px;padding: 20 px 15 px;min - height: 170 px;margin: 14 px 0 22 px;display: flex;flex - direction: column;gap: 12 px
+    }.bubble - row {
+        display: flex
+    }.bubble - row.left {
+        justify - content: flex - start
+    }.bubble - row.right {
+        justify - content: flex - end
+    }.bubble {
+        max - width: 85 % ;
+        padding: 11 px 15 px;
+        border - radius: 17 px;
+        box - shadow: 0 1 px 3 px #0000000b;overflow-wrap:anywhere}.bubble-in{background:white;border-top-left-radius:5px}.bubble-out{background:# C8102E;
+        color: white;
+        border - top - right - radius: 5 px
+    }.bubble - who {
+        display: block;font - size: 11 px;font - weight: 750;opacity: .75;margin - bottom: 4 px
+    }.bubble small {
+        display: block;text - align: right;font - size: 10 px;opacity: .65;margin - top: 5 px
+    }.option {
+        transition: border - color .12 s,
+        background .12 s
+    }.option: hover {
+        background: #fff7f8
+    }
+@media(max - width: 600 px) {
+    .chat - thread {
+        padding: 12 px
+    }.bubble {
+        max - width: 93 %
+    }
+}
 
 /* v4 messenger-style conversation, deliberately not a question card */
-#panel:has(.conversation-app){max-width:860px}
-#content:has(.conversation-app){padding:0;overflow:hidden;border:1px solid #e9e9eb;border-radius:24px;box-shadow:0 14px 55px rgba(24,27,32,.05)}
-.conversation-app{display:flex;flex-direction:column;min-height:620px;background:#f5f6f8}
-.conversation-top{display:flex;align-items:center;gap:13px;background:#fff;padding:18px 22px;border-bottom:1px solid #e9ebef}
-.chat-avatar{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:#fff0f2;font-size:23px}
-.conversation-top strong{display:block;font-size:17px}.conversation-top small{display:block;color:#747981;font-size:12px;margin-top:2px}
-.chat-online{margin-left:auto;color:#27975d;font-size:12px;font-weight:700}
-.conversation-messages{flex:1;min-height:250px;max-height:430px;overflow-y:auto;padding:22px 24px;background:radial-gradient(circle at 20% 15%,#fff 0,#f7f7f9 40%,#f1f3f6 100%)}
-.conversation-messages .chat-thread{background:transparent;margin:0;padding:0;min-height:0;gap:16px}
-.conversation-messages .bubble{font-size:15px;line-height:1.55;max-width:min(78%,510px);padding:12px 16px;border-radius:19px;box-shadow:0 2px 10px #2021240b}
-.conversation-messages .bubble-in{border-bottom-left-radius:5px;border-top-left-radius:19px;background:#fff}
-.conversation-messages .bubble-out{border-bottom-right-radius:5px;border-top-right-radius:19px;background:#C8102E;color:#fff}
-.conversation-compose{background:#fff;padding:18px 24px 24px;border-top:1px solid #e9ebef}
-.reply-heading{font-size:11px;font-weight:800;letter-spacing:1.4px;color:#737780;margin-bottom:10px}
-.reply-choice{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;text-align:left;background:#fff;border:1px solid #e4e5e8;border-radius:14px;padding:13px 16px;margin-top:9px;color:#202124;font-weight:500;transition:.15s}
-.reply-choice span{color:#C8102E;font-size:19px}.reply-choice:hover{border-color:#C8102E;background:#fff8f9;transform:translateY(-1px)}
-.reply-feedback{padding:14px 16px;border-radius:14px;background:#f4f8f5;color:#234c36;margin-top:12px;font-size:14px}
-.reply-feedback.incorrect{background:#fff6f1;color:#7d492d}.reply-feedback strong{display:block;margin-bottom:4px}.reply-feedback small{display:block;opacity:.65;margin-top:7px}
+#panel: has(.conversation - app) {
+    max - width: 860 px
+}
+#content: has(.conversation - app) {
+        padding: 0;overflow: hidden;border: 1 px solid #e9e9eb;border - radius: 24 px;box - shadow: 0 14 px 55 px rgba(24, 27, 32, .05)
+    }
+    .conversation - app {
+        display: flex;flex - direction: column;min - height: 620 px;background: #f5f6f8
+    }
+    .conversation - top {
+        display: flex;align - items: center;gap: 13 px;background: #fff;padding: 18 px 22 px;border - bottom: 1 px solid #e9ebef
+    }
+    .chat - avatar {
+        display: grid;place - items: center;width: 48 px;height: 48 px;border - radius: 50 % ;background: #fff0f2;font - size: 23 px
+    }
+    .conversation - top strong {
+        display: block;font - size: 17 px
+    }.conversation - top small {
+        display: block;color: #747981;font-size:12px;margin-top:2px}
+.chat-online{margin-left:auto;color:# 27975 d;font - size: 12 px;font - weight: 700
+    }
+    .conversation - messages {
+        flex: 1;min - height: 250 px;max - height: 430 px;overflow - y: auto;padding: 22 px 24 px;background: radial - gradient(circle at 20 % 15 % , #fff 0, #f7f7f9 40 % , #f1f3f6 100 % )
+    }
+    .conversation - messages.chat - thread {
+        background: transparent;margin: 0;padding: 0;min - height: 0;gap: 16 px
+    }
+    .conversation - messages.bubble {
+        font - size: 15 px;
+        line - height: 1.55;
+        max - width: min(78 % , 510 px);
+        padding: 12 px 16 px;
+        border - radius: 19 px;
+        box - shadow: 0 2 px 10 px #2021240b}
+.conversation-messages .bubble-in{border-bottom-left-radius:5px;border-top-left-radius:19px;background:# fff
+    }
+    .conversation - messages.bubble - out {
+        border - bottom - right - radius: 5 px;
+        border - top - right - radius: 19 px;
+        background: #C8102E;
+        color: #fff
+    }
+    .conversation - compose {
+        background: #fff;padding: 18 px 24 px 24 px;border - top: 1 px solid #e9ebef
+    }
+    .reply - heading {
+        font - size: 11 px;
+        font - weight: 800;
+        letter - spacing: 1.4 px;
+        color: #737780;margin-bottom:10px}
+.reply-choice{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;text-align:left;background:# fff;
+        border: 1 px solid #e4e5e8;
+        border - radius: 14 px;
+        padding: 13 px 16 px;
+        margin - top: 9 px;
+        color: #202124;font-weight:500;transition:.15s}
+.reply-choice span{color:# C8102E;
+        font - size: 19 px
+    }.reply - choice: hover {
+        border - color: #C8102E;
+        background: #fff8f9;
+        transform: translateY(-1 px)
+    }
+    .reply - feedback {
+        padding: 14 px 16 px;border - radius: 14 px;background: #f4f8f5;color: #234c36;margin-top:12px;font-size:14px}
+.reply-feedback.incorrect{background:# fff6f1;color: #7d492d}.reply-feedback strong{display:block;margin-bottom:4px}.reply-feedback small{display:block;opacity:.65;margin-top:7px}
 @media(max-width:600px){.conversation-app{min-height:calc(100dvh - 175px)}.conversation-messages{padding:16px 12px;max-height:45dvh}.conversation-compose{padding:15px}.conversation-messages .bubble{max-width:90%}.chat-online{display:none}}
 
 /* v5: Rush Hour stays a fast multiple-choice quiz, not a messenger chat. */
-#panel:has(.rush-app){max-width:760px}
-#content:has(.rush-app){padding:0;overflow:hidden}
-.rush-app{padding:30px;background:#fff}
-.rush-head{display:flex;align-items:center;justify-content:space-between;gap:15px;border-bottom:1px solid #eee;padding-bottom:18px}
-.rush-head h2{margin:6px 0}.rush-head p{margin:0;font-size:14px}
-.rush-score{display:flex;flex-direction:column;align-items:center;background:#fff1f3;color:#C8102E;padding:10px 22px;border-radius:18px;min-width:96px}
-.rush-score strong{font-size:30px;line-height:1.1}.rush-score small{font-size:11px;font-weight:700}
-.rush-question{padding:24px 0 10px}.rush-question-meta{font-size:12px;font-weight:750;letter-spacing:1px;color:#C8102E}.rush-question-meta span{color:#aaa;padding:0 7px}
-.rush-question h3{font-size:clamp(21px,3vw,29px);line-height:1.3;margin:13px 0 8px;letter-spacing:-.4px}
-.rush-options{display:grid;gap:11px}
-.rush-choice{display:flex;align-items:center;gap:13px;text-align:left;border:1px solid #e4e4e7;background:#fff;border-radius:16px;padding:14px 16px;min-height:62px;font-weight:550}
-.rush-choice:hover{border-color:#C8102E;background:#fff8f9}.rush-letter{flex:none;width:32px;height:32px;border-radius:10px;display:grid;place-items:center;background:#f4f4f5;color:#62666c;font-size:13px;font-weight:800}
-.rush-feedback{min-height:28px;margin-top:14px;font-size:13px;font-weight:750}.rush-feedback.is-correct{color:#198754}.rush-feedback.is-incorrect{color:#C8102E}
-@media(max-width:600px){.rush-app{padding:20px 16px}.rush-head h2{font-size:21px}.rush-choice{padding:12px}}
-</style></head><body><header><div class="wrap"><div class="brand">sharetea <small>ACADEMY</small></div><span id="connection" class="pill">Connecting…</span></div></header><main class="wrap"><section id="home"><div class="hero"><div class="eyebrow">THE TEAM CHALLENGE 🧋</div><h1>Think fast.<br>Serve better. <span style="color:var(--red)">✦</span></h1><p>Practice customer conversations, challenge your teammates, and learn together.</p><div class="actions"><a class="btn alt" href="./study-guide.html">Read study guide</a><a class="btn alt" href="./study-guide.pdf" download>Download PDF</a></div></div><div class="grid"><div class="card"><h2>💬 Customer Simulator</h2><p>Practice five real-world customer conversations.</p><button class="btn" data-mode="sim">Start practicing</button></div><div class="card"><h2>⚡ Rush Hour</h2><p>Answer as many quick-fire questions as you can in 30 seconds.</p><button class="btn" data-mode="rush">Start challenge</button></div><div class="card"><h2>🤝 Roleplay Match</h2><p>Play Customer and Staff with a real teammate.</p><button class="btn" data-mode="role">Play together</button></div></div><div class="card"><div class="row"><h2>🏆 Live leaderboard</h2><span class="pill">● Live</span></div><div class="actions"><button class="btn alt small" data-board="sim">Simulator</button><button class="btn alt small" data-board="rush">Rush Hour</button><button class="btn alt small" data-board="role">Roleplay</button></div><div id="leaderboard">Loading scores…</div></div></section>
-<section id="panel" class="panel hide"><div class="row"><button id="back" class="btn alt small">← Home</button><span id="panelMode" class="eyebrow">ACADEMY</span><span id="clock" class="timer"></span></div><div class="progress"><div id="bar" style="width:0"></div></div><div class="card" id="content"></div></section></main><footer class="footer">SHARETEA ACADEMY · THINK FAST. SERVE BETTER.</footer><script type="module" src="./app.js?v=5.0.0"></script></body></html>
+# panel: has(.rush - app) {
+            max - width: 760 px
+        }
+        #content: has(.rush - app) {
+                padding: 0;overflow: hidden
+            }
+            .rush - app {
+                padding: 30 px;background: #fff
+            }
+            .rush - head {
+                display: flex;align - items: center;justify - content: space - between;gap: 15 px;border - bottom: 1 px solid #eee;padding - bottom: 18 px
+            }
+            .rush - head h2 {
+                margin: 6 px 0
+            }.rush - head p {
+                margin: 0;font - size: 14 px
+            }
+            .rush - score {
+                display: flex;flex - direction: column;align - items: center;background: #fff1f3;color: #C8102E;padding: 10 px 22 px;border - radius: 18 px;min - width: 96 px
+            }
+            .rush - score strong {
+                font - size: 30 px;
+                line - height: 1.1
+            }.rush - score small {
+                font - size: 11 px;
+                font - weight: 700
+            }
+            .rush - question {
+                padding: 24 px 0 10 px
+            }.rush - question - meta {
+                font - size: 12 px;
+                font - weight: 750;
+                letter - spacing: 1 px;
+                color: #C8102E
+            }.rush - question - meta span {
+                color: #aaa;padding: 0 7 px
+            }
+            .rush - question h3 {
+                font - size: clamp(21 px, 3 vw, 29 px);
+                line - height: 1.3;
+                margin: 13 px 0 8 px;
+                letter - spacing: -.4 px
+            }
+            .rush - options {
+                display: grid;gap: 11 px
+            }
+            .rush - choice {
+                display: flex;align - items: center;gap: 13 px;text - align: left;border: 1 px solid #e4e4e7;background: #fff;border - radius: 16 px;padding: 14 px 16 px;min - height: 62 px;font - weight: 550
+            }
+            .rush - choice: hover {
+                border - color: #C8102E;
+                background: #fff8f9
+            }.rush - letter {
+                flex: none;width: 32 px;height: 32 px;border - radius: 10 px;display: grid;place - items: center;background: #f4f4f5;color: #62666c;font-size:13px;font-weight:800}
+.rush-feedback{min-height:28px;margin-top:14px;font-size:13px;font-weight:750}.rush-feedback.is-correct{color:# 198754
+            }.rush - feedback.is - incorrect {
+                color: #C8102E
+            }
+        @media(max - width: 600 px) {
+            .rush - app {
+                padding: 20 px 16 px
+            }.rush - head h2 {
+                font - size: 21 px
+            }.rush - choice {
+                padding: 12 px
+            }
+        } <
+        /style></head > < body > < header > < div class = "wrap" > < div class = "brand" > sharetea < small > ACADEMY < /small></div > < span id = "connection"
+        class = "pill" > Connecting… < /span></div > < /header><main class="wrap"><section id="home"><div class="hero"><div class="eyebrow">THE TEAM CHALLENGE 🧋</div > < h1 > Think fast. < br > Serve better. < span style = "color:var(--red)" > ✦ < /span></h1 > < p > Practice customer conversations,
+        challenge your teammates,
+        and learn together. < /p><div class="actions"><a class="btn alt" href="./study - guide.html ">Read study guide</a><a class="
+        btn alt " href=". / study - guide.pdf " download>Download PDF</a></div></div><div class="
+        grid "><div class="
+        card "><h2>💬 Battle the NPC</h2><p>Practice five real-world customer conversations.</p><button class="
+        btn " data-mode="
+        sim ">Start practicing</button></div><div class="
+        card "><h2>⚡ Rush Hour</h2><p>Answer as many quick-fire questions as you can in 30 seconds.</p><button class="
+        btn " data-mode="
+        rush ">Start challenge</button></div><div class="
+        card "><h2>🤝 Roleplay Match</h2><p>Play Customer and Staff with a real teammate.</p><button class="
+        btn " data-mode="
+        role ">Play together</button></div></div><div class="
+        card "><div class="
+        row "><h2>🏆 Live leaderboard</h2><span class="
+        pill ">● Live</span></div><div class="
+        actions "><button class="
+        btn alt small " data-board="
+        sim ">Simulator</button><button class="
+        btn alt small " data-board="
+        rush ">Rush Hour</button><button class="
+        btn alt small " data-board="
+        role ">Roleplay</button></div><div id="
+        leaderboard ">Loading scores…</div></div></section> <
+        section id = "panel"
+        class = "panel hide" > < div class = "row" > < button id = "back"
+        class = "btn alt small" > ←Home < /button><span id="panelMode" class="eyebrow">ACADEMY</span > < span id = "clock"
+        class = "timer" > < /span></div > < div class = "progress" > < div id = "bar"
+        style = "width:0" > < /div></div > < div class = "card"
+        id = "content" > < /div></section > < /main><footer class="footer">SHARETEA ACADEMY · THINK FAST. SERVE BETTER.</footer > < script type = "module"
+        src = "./app.js?v=5.0.0" > < /script></body > < /html>
